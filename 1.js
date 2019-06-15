@@ -9,19 +9,22 @@ class TodoApp extends React.Component {
     render() {
       return (
         <div>
-          <h3>TODO</h3>
-          <TodoList items={this.state.items} />
+          <h3>finish</h3>
+          <finishList items={this.state.items} />
           <form onSubmit={this.handleSubmit}>
-            <label htmlFor="new-todo">
-              What needs to be done?
+            <label htmlFor="new-finish">
+              Did you finish your homework?
             </label>
             <input
-              id="new-todo"
+              id="new-finish"
               onChange={this.handleChange}
               value={this.state.text}
             />
             <button>
-              Add #{this.state.items.length + 1}
+              Yes
+            </button>
+            <button>
+                No
             </button>
           </form>
         </div>
